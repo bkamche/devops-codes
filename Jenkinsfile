@@ -6,15 +6,15 @@ pipeline {
   stages {
     stage('build'){
       steps {
-        sh 'mv clean'
-        sh 'mv install'
-        sh 'mv package'
+        sh 'mvn clean'
+        sh 'mvn install'
+        sh 'mvn package'
       }  
     }
      stage('test'){
       steps {
        echo "test step"
-       sh 'mv test'
+       sh 'mvn test'
       }  
     }
      stage('deploy'){
