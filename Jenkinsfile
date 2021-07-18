@@ -15,6 +15,12 @@ pipeline {
         sh 'mvn test'
       }  
     }
+    stages ('deploy to tomcat') {
+         stape {
+           deploy adapters: [tomcat8(path: '', url: 'http://192.168.1.217:8080/')], contextPath: null, war: '**/*.war'
+         }
+    }
+
      stage('test'){
       steps {
        echo "test step"
