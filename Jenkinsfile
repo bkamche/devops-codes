@@ -20,26 +20,5 @@ pipeline {
            deploy adapters: [tomcat8(path: '', url: 'http://192.168.1.217:8080/')], contextPath: null, war: '**/*.war'
          }
     }
-
-     stage('test'){
-      steps {
-       echo "test step"
-       sh 'mvn test'
-      }  
-    }
-     stage('deploy'){
-      steps {
-       echo "deploy step"
-       sleep 10
-      }  
-    }
-     stage('CI/CD'){
-      steps {
-       echo "I love this pipeline CI/CI"
-       echo "This is what I love from this pipeline"
-       echo "Thi pipeline is sweet"
-       sleep 10
-      }  
-    }
   }
 }   
