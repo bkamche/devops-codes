@@ -26,6 +26,7 @@ pipeline {
      stage('CI/CD'){
       steps {
        echo "I love this pipeline CI/CI"
+       echo "This is what I love from this pipeline"
        sleep 10
       }  
     }
