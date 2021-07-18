@@ -31,6 +31,7 @@ pipeline {
       steps {
        echo "I love this pipeline CI/CI"
        echo "This is what I love from this pipeline"
+       echo "Thi pipeline is sweet"
        sleep 10
       }  
     }
