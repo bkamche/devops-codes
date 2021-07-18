@@ -23,9 +23,9 @@ pipeline {
        sleep 10
       }  
     }
-     stage('docker'){
+     stage('CI/CD'){
       steps {
-       echo "image step"
+       echo "I love this pipeline CI/CI"
        sleep 10
       }  
     }
